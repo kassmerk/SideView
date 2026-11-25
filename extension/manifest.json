@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "SideView — Always-on-top video",
+  "version": "1.0.0",
+  "description": "YouTube in a floating mini player. Automatic picture-in-picture, playback controls and a resizable window.",
+  "minimum_chrome_version": "111",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "SideView",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+    "js": ["locales.js", "pip-window.js", "player.js"],
+    "run_at": "document_idle",
+    "world": "MAIN"
+  }]
+}

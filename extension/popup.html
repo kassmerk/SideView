@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SideView</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-shell">
+  <div class="popup-content">
+  <header>
+    <h1 class="brand">
+      <svg class="brand-icon" viewBox="0 0 40 32" fill="none" aria-hidden="true">
+        <rect x="2" y="3" width="36" height="26" rx="6" stroke="currentColor" stroke-width="3"/>
+        <path d="M17 10.5a1.4 1.4 0 0 1 2.1-1.2l9 5.5a1.4 1.4 0 0 1 0 2.4l-9 5.5a1.4 1.4 0 0 1-2.1-1.2v-11Z" fill="#ff4549"/>
+      </svg>
+      <span>SideView</span>
+    </h1>
+    <span class="badge">Mini player</span>
+  </header>
+  <main>
+    <section class="preview" aria-label="Current video">
+      <span class="eyebrow">YouTube</span>
+      <h2 id="video-title">Open a video on YouTube</h2>
+    </section>
+    <button id="toggle" class="primary" disabled>Loading…</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="update-required" class="installation" aria-label="Tab update required" hidden>
+      <h2>This YouTube tab needs a refresh</h2>
+      <p>It is still running an older version of SideView. Reload the tab, then open SideView again. Playback may restart.</p>
+      <button id="reload-tab" class="primary">Reload YouTube tab</button>
+    </section>
+    <section id="installation" class="installation" aria-label="Extension installation" hidden>
+      <h2>Getting started</h2>
+      <ol>
+        <li>Enter <code>chrome://extensions</code> or <code>edge://extensions</code> in the address bar.</li>
+        <li>Enable “Developer mode” and click “Load unpacked”.</li>
+        <li>Select the <code>extension</code> folder containing <code>manifest.json</code>.</li>
+        <li>Play a YouTube video, then open SideView from the browser’s extensions menu (the puzzle icon).</li>
+      </ol>
+    </section>
+    <section class="settings" aria-label="Settings">
+      <label><span><strong>Glass design</strong><small>Translucent mini-player controls</small></span><span class="switch"><input id="glassDesign" type="checkbox" role="switch" disabled><span class="track" aria-hidden="true"></span></span></label>
+      <label><span><strong>Player controls</strong><small>Volume, seeking and quality inside PiP</small></span><span class="switch"><input id="playerControls" type="checkbox" role="switch" disabled><span class="track" aria-hidden="true"></span></span></label>
+      <label><span><strong>Keep video quality</strong><small>Preserve current resolution in PiP</small></span><span class="switch"><input id="keepQuality" type="checkbox" role="switch" disabled><span class="track" aria-hidden="true"></span></span></label>
+      <label><span><strong>Automatic PiP</strong><small>When you leave the video</small></span><span class="switch"><input id="automatic" type="checkbox" role="switch" disabled><span class="track" aria-hidden="true"></span></span></label>
+      <label><span><strong>Return to tab</strong><small>When you come back to YouTube</small></span><span class="switch"><input id="returnOnFocus" type="checkbox" role="switch" disabled><span class="track" aria-hidden="true"></span></span></label>
+    </section>
+    <label class="language-row"><strong>Language</strong><select id="language" aria-label="Choose language" disabled><option value="en">English</option><option value="ru">Русский</option></select></label>
+    <details><summary>Automatic PiP help</summary><p>In Chrome, open YouTube’s site settings using the icon next to the address and allow “Automatic picture-in-picture”, if available. Play a video with sound, then minimize the browser or switch tabs.</p><p>Availability depends on your browser version and settings. If no window appears, use the button above. Automatic PiP may not be available in Edge.</p></details>
+  </main>
+  </div>
+  </div>
+  <script src="locales.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
