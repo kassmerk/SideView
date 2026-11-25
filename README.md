@@ -22,10 +22,10 @@ Choose translucent or solid controls with the **Glass design** switch in the ext
 
 ### Installation
 
-1. Download the repository using **Code → Download ZIP** and extract it.
+1. Download **SideView.zip** from [Releases](https://github.com/kassmerk/SideView/releases/latest) and extract it. Alternatively, download the repository using **Code → Download ZIP** and extract it.
 2. Open `chrome://extensions` in Chrome or `edge://extensions` in Edge.
 3. Enable **Developer mode**.
-4. Click **Load unpacked** and select the **extension** folder containing `manifest.json`.
+4. Click **Load unpacked** and select the extracted folder containing `manifest.json`. For **SideView.zip** from Releases, select the extracted **SideView** folder; for the repository ZIP, select its **extension** folder.
 5. Pin SideView to the toolbar using the browser's extensions menu.
 6. Open a video at `https://www.youtube.com`, start playback, and click **SideView → Open mini player**.
 
@@ -189,10 +189,10 @@ YouTube в небольшом окне поверх остальных прил�
 
 ### Установка
 
-1. Скачай репозиторий через **Code → Download ZIP** и распакуй.
+1. Скачай **SideView.zip** из раздела [Releases](https://github.com/kassmerk/SideView/releases/latest) и распакуй. Или скачай репозиторий через **Code → Download ZIP** и распакуй его.
 2. Открой `chrome://extensions` в Chrome или `edge://extensions` в Edge.
 3. Включи **Режим разработчика**.
-4. Нажми **Загрузить распакованное расширение** и выбери папку **extension**, в которой лежит `manifest.json`.
+4. Нажми **Загрузить распакованное расширение (Load unpacked)** и выбери распакованную папку с `manifest.json`. Для **SideView.zip** из Releases это папка **SideView**, а для архива репозитория — папка **extension** внутри него.
 5. Закрепи SideView на панели расширений через значок пазла.
 6. Открой видео на `https://www.youtube.com`, запусти его и нажми **SideView → Открыть мини-плеер**.
 
